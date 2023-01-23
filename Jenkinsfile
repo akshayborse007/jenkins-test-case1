@@ -30,7 +30,7 @@ pipeline{
             stage("deploy"){
                 steps{
                 //sh 'cd home/ubuntu/prod/workspace/mine_master'
-                sh 'sudo apt update'
+                
                 sh 'sudo docker build -t case /home/ubuntu/prod/workspace/mine_master'
                 sh 'sudo docker run -itd --name project -p 80:80 case .'
                     
