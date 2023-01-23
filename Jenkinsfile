@@ -9,8 +9,8 @@ pipeline{
             sh 'pwd'
             //sh 'cd /home/ubuntu/new && pwd'
             dir("/home/ubuntu/new"){
-            git branch: 'master', url: 'https://github.com/akshayborse007/test.git'
-            sh 'mvn clean install -y'
+            git branch: 'develop', url: 'https://github.com/akshayborse007/test.git'
+            //sh 'mvn clean install -y'
             
             
             }    
@@ -27,15 +27,15 @@ pipeline{
             
         // }
 
-        stage("deploy"){
-                steps{
-                dir("/home/ubuntu/new"){
-                sh 'docker build -t case .'
-                sh 'docker run -itd --name project -p 80:80 case .'
-                }    
-                }
+        // stage("deploy"){
+        //         steps{
+        //         dir("/home/ubuntu/new"){
+        //         sh 'docker build -t case .'
+        //         sh 'docker run -itd --name project -p 80:80 case .'
+        //         }    
+        //         }
             
-        }
+        // }
 
     }
     
