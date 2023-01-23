@@ -10,7 +10,7 @@ pipeline{
             //sh 'cd /home/ubuntu/new && pwd'
             dir("/home/ubuntu/new"){
             git branch: 'master', url: 'https://github.com/akshayborse007/test.git'
-            sh 'mvn clean install -y'
+            //sh 'mvn clean install -y'
             
             
             }    
