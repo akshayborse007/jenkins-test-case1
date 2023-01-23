@@ -9,11 +9,10 @@ pipeline{
            
             //sh 'cd /home/ubuntu/new && pwd'
             sh 'pwd'
-             dir("/home/ubuntu/new")
-             {
+            sh 'cd home/ubuntu/pp'
             git branch: 'develop', url: 'https://github.com/akshayborse007/test.git'
             
-             }
+        
             
               
             }
