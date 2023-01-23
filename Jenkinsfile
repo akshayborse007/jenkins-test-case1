@@ -20,19 +20,20 @@ pipeline{
 stages{
         stage("build"){
                 steps{
+                sh 'pwd'
                  git branch: 'master', url: 'https://github.com/akshayborse007/test.git'
                 }    
                 }
             
          
-            stage("deploy"){
-                            steps{
+            // stage("deploy"){
+            //                 steps{
                         
-                            sh 'sudo apt update && sudo apt install docker.io -y' 
-                            sh 'sudo docker build -t case .'
-                            sh 'sudo docker run -itd --name project -p 80:80 case .'
-                            }    
-                            }
+            //                 sh 'sudo apt update && sudo apt install docker.io -y' 
+            //                 sh 'sudo docker build -t case .'
+            //                 sh 'sudo docker run -itd --name project -p 80:80 case .'
+            //                 }    
+            //                 }
                         
                     
                     // stage("deploy"){
