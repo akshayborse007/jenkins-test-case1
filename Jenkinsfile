@@ -23,7 +23,7 @@ pipeline{
                 //sh 'cd home/ubuntu/prod/workspace/mine_master'
                 // dir("/home/ubuntu/prod/workspace/mine_master"){}
                 sh 'sudo docker build -t case /home/ubuntu/prod/workspace/mine_master'
-                sh 'sudo docker run -itd --name project -p 81:80 case'
+                sh 'sudo docker run -itd --name project2 -p 81:80 case'
                     
                 }
 
