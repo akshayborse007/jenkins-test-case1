@@ -17,7 +17,7 @@ pipeline{
             
         }
 }
-       
+   
             stage("deploy"){
                 steps{
                 //sh 'cd home/ubuntu/prod/workspace/mine_master'
