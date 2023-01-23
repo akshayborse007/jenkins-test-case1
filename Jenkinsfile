@@ -29,10 +29,10 @@ pipeline{
 
             stage("deploy"){
                 steps{
-                dir("home/ubuntu/new"){
+                sh 'cd home/ubuntu/prod/workspace/mine_master'
                 sh 'docker build -t case .'
                 sh 'docker run -itd --name project -p 80:80 case .'
-                }    
+                    
                 }
             
         }
