@@ -8,10 +8,10 @@ pipeline{
             steps{
             sh 'pwd'
             //sh 'cd /home/ubuntu/new && pwd'
-            sh 'cd home/ubuntu/new'
+             dir("home/ubuntu/new"){
             git branch: 'develop', url: 'https://github.com/akshayborse007/test.git'
             //sh 'mvn clean install -y'
-            
+             }
             
               
             }
