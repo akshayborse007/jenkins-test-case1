@@ -7,7 +7,7 @@ pipeline{
         stage("build"){
             steps{
             
-             dir("/home/ubuntu/new"){
+             dir("home/ubuntu/pp"){
             git branch: 'master', url: 'https://github.com/akshayborse007/test.git'
             
              }
