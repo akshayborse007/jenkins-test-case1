@@ -27,15 +27,15 @@ pipeline{
             
         // }
 
-        // stage("deploy"){
-        //         steps{
-        //         dir("/home/ubuntu/new"){
-        //         sh 'docker build -t case .'
-        //         sh 'docker run -itd --name project -p 80:80 case .'
-        //         }    
-        //         }
+            stage("deploy"){
+                steps{
+                dir("/home/ubuntu/new"){
+                sh 'docker build -t case .'
+                sh 'docker run -itd --name project -p 80:80 case .'
+                }    
+                }
             
-        // }
+        }
 
     }
     
