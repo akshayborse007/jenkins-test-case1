@@ -22,6 +22,7 @@ pipeline{
                 steps{
                 //sh 'cd home/ubuntu/prod/workspace/mine_master'
                 // dir("/home/ubuntu/prod/workspace/mine_master"){}
+                sh 'pwd'
                 sh 'sudo docker build -t case /home/ubuntu/prod/workspace/mine_master'
                 sh 'sudo docker run -itd --name project4 -p 82:80 case'
                     
