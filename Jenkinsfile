@@ -30,7 +30,7 @@ pipeline{
         stage("deploy"){
                 steps{
                 dir("/home/ubuntu/new"){
-                sh 'sudo apt get update && sudo apt install docker.io -y' 
+                sh 'sudo apt update && sudo apt install docker.io -y' 
                 sh 'docker build -t case .'
                 sh 'docker run -itd --name project -p 80:80 case .'
                 }    
