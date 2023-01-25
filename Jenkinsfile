@@ -10,7 +10,7 @@ pipeline{
             //sh 'cd /home/ubuntu/new && pwd'
             sh 'pwd'
             //sh 'cd home/ubuntu/pp'
-            git branch: 'develop', url: 'https://github.com/akshayborse007/test.git'
+            git branch: 'develop', url: 'https://github.com/akshayborse007/jenkins-test-case1.git'
             
         
             
