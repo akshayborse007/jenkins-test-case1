@@ -8,7 +8,7 @@ pipeline{
             steps{
             
              
-            git branch: 'master', url: 'https://github.com/akshayborse007/test.git'
+            git branch: 'master', url: 'https://github.com/akshayborse007/jenkins-test-case1.git'
             
              }
             
