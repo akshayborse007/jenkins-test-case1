@@ -1,0 +1,21 @@
+---
+- hosts: localhost
+  become: true
+  name: jenkinmaster
+  tasks:
+   - name: master task
+     script: jenkins.sh
+
+- hosts: test
+  become: true
+  name: jeninsnode1
+  tasks:
+   - name: node1 task
+     script: docker.sh
+    
+- hosts: prod
+  become: true
+  name: jenkinsnode2
+  tasks:
+   - name: node2 task
+     script: docker.sh
