@@ -20,7 +20,7 @@ pipeline{
                 //sh 'cd home/ubuntu/prod/workspace/mine_master'
                 // dir("/home/ubuntu/prod/workspace/mine_master"){}
                 sh 'pwd'
-                /sh 'sudo docker rm -f $(sudo docker ps -a -q)'
+                sh 'sudo docker rm -f $(sudo docker ps -a -q)'
                 // sh 'sudo docker system prune -f'
                 sh 'sudo docker build -t job11 /home/ubuntu/prod/workspace/job3'
                 sh 'sudo docker run -itd --name pro2 -p 90:80 job11'
