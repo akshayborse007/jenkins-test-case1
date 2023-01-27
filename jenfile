@@ -22,7 +22,7 @@ pipeline{
                 sh 'pwd'
                 sh 'sudo docker rm -f $(sudo docker ps -a -q)'
                 sh 'sudo docker system prune -f'
-                sh 'sudo docker build -t job3 /home/ubuntu/prod/workspace/job3 .'
+                sh 'sudo docker build -t job3 /home/ubuntu/prod/workspace/job3'
                 sh 'sudo docker run -itd --name project2 -p 82:80 job3'
                     
                 }
