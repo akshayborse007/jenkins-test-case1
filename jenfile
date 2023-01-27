@@ -11,11 +11,9 @@ pipeline{
             }
             
               
-            }
+        }
             
-
-   
-            stage("deploy"){
+              stage("deploy"){
                 steps{
                 //sh 'cd home/ubuntu/prod/workspace/mine_master'
                 // dir("/home/ubuntu/prod/workspace/mine_master"){}
