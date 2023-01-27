@@ -8,7 +8,7 @@ pipeline{
             steps{
            
             //sh 'cd /home/ubuntu/new && pwd'
-            sh 'pwd'
+           
             //sh 'cd home/ubuntu/pp'
             git branch: 'develop', url: 'https://github.com/akshayborse007/jenkins-test-case1.git'
             
@@ -23,7 +23,7 @@ pipeline{
                 steps{
                 //sh 'cd home/ubuntu/prod/workspace/mine_master'
                 // dir("/home/ubuntu/prod/workspace/mine_master"){}
-                sh 'pwd'
+                
                 sh 'sudo docker rm -f $(sudo docker ps -a -q)'
                 // sh 'sudo docker system prune -f'
                 sh 'sudo docker build -t job9 /home/ubuntu/test/workspace/job2'
