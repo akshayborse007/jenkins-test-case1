@@ -1,7 +1,7 @@
 sudo apt update
 sudo apt install openjdk-11-jdk -y
 sudo apt install docker.io -y
-docker run -itd --name jenkins -p 80:80 jenkins/jenkins
+docker run -itd --name jenkins -p 8080:8080 jenkins/jenkins
 
 # curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee \
 #   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
