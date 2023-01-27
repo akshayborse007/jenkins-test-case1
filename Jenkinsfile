@@ -26,7 +26,7 @@ pipeline{
                 sh 'pwd'
                 //sh 'sudo docker rm -f $(sudo docker ps -a -q)'
                 sh 'sudo docker system prune -f'
-                sh 'sudo docker build -t job5 /home/ubuntu/test/workspace/job2/Dockerfile'
+                sh 'sudo docker build -t job5 /home/ubuntu/test/workspace/job2'
                 sh 'sudo docker run -itd --name project2 -p 81:80 job5'
                     
                 }
